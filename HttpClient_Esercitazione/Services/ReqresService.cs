@@ -65,7 +65,7 @@ namespace HttpClient_Esercitazione.Services
                             var users = JsonSerializer.Deserialize<ListResult<User>>(streamResult, _jsonSerializerOptions);
                             strResult = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-                            return (users, strResult);
+                            return users != null ? (users, strResult) : (new ListResult<User>(), strResult);
                         }     
                     }
                     else
@@ -120,7 +120,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<(NewUserCreated, string)> CreateNewUserAsync(CancellationToken token)
+        public async Task<(NewUserCreated?, string)> CreateNewUserAsync(CancellationToken token)
         {
             var newUser = new NewUser
             {
@@ -188,7 +188,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<(SingleResource, string)> GetSingleResourceAsync(CancellationToken token)
+        public async Task<(SingleResource?, string)> GetSingleResourceAsync(CancellationToken token)
         {
             try
             {

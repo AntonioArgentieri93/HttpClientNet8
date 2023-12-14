@@ -42,7 +42,7 @@ namespace HttpClient_Esercitazione
                 // HTTP 408 status code (timeout della richiesta)
                 TimeSpan.FromSeconds(1),
                 TimeSpan.FromSeconds(5),
-                TimeSpan.FromSeconds(10),
+                TimeSpan.FromSeconds(10)
             }));
 
             services.AddSingleton<IReqresService, ReqresService>();
