@@ -1,6 +1,6 @@
 Questa applicazione WPF sviluppata in .NET 8 è progettata per gestire le richieste HTTP utilizzando IHttpClientFactory. 
 Il progetto fa uso della programmazione asincrona con i pattern async/await per operazioni di rete efficienti e non bloccanti. 
-In questa appplicazione si fa uso della dependency injection e del pattern MVVM per garantire una maggiore modularità e testabilità. 
+In questa applicazione si fa uso della dependency injection e del pattern MVVM per garantire una maggiore modularità e testabilità. 
 
 
 This WPF application developed in .NET 8 is designed to handle HTTP requests using IHttpClientFactory.
