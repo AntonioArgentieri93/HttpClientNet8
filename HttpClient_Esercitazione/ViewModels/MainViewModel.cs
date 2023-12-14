@@ -34,6 +34,8 @@ namespace HttpClient_Esercitazione.ViewModels
                     CreateNewUserAsyncCommand.NotifyCanExecuteChanged();
                     GetSingleUserNotFoundAsyncCommand.NotifyCanExecuteChanged();
                     GetSingleResourceAsyncCommand.NotifyCanExecuteChanged();
+                    GetDelayedResponseAsyncCommand.NotifyCanExecuteChanged();
+                    DeleteUserAsyncCommand.NotifyCanExecuteChanged();
                 }
             }
         }
