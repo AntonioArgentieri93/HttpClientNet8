@@ -1,0 +1,79 @@
+﻿<Window x:Class="HttpClient_Esercitazione.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}">
+
+    <Grid Margin="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="0,0,10,0">
+                <Button Command="{Binding GetListUsersAsStringResultAsyncCommand}"
+                        Content="LIST USERS (string)"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding GetListUsersAsyncCommand}"
+                        Content="LIST USERS"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding CreateNewUserAsStringResultAsyncCommand}"
+                        Content="CREATE (string)"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding CreateNewUserAsyncCommand}"
+                        Content="CREATE"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding GetSingleUserNotFoundAsyncCommand}"
+                        Content="SINGLE USER NOT FOUND"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding GetSingleResourceAsyncCommand}"
+                        Content="SINGLE RESOURCE"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding GetDelayedResponseAsyncCommand}"
+                        Content="DELAYED RESPONSE"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding DeleteUserAsyncCommand}"
+                        Content="DELETE"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+
+                <Button Command="{Binding CancelOperationCommand}"
+                        Content="Cancel Operation"
+                        Width="150"
+                        Height="25"
+                        Margin="0,0,0,15"/>
+            </StackPanel>
+
+            <TextBox Text="{Binding Response}"
+                     IsEnabled="False"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     Grid.Column="1" />
+        </Grid>
+    </Grid>
+</Window>
