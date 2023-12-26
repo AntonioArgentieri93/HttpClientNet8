@@ -2,6 +2,6 @@
 {
     public class SingleResource
     {
-        public Data Data { get; set; } = null!;
+        public Data Data { get; init; } = null!;
     }
 }

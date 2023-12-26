@@ -4,16 +4,16 @@ namespace HttpClient_Esercitazione.Models
 {
     public class ListResult<T>
     {
-        public int Page { get; set; }
+        public int Page { get; init; }
 
         [JsonPropertyName("per_page")]
-        public int PerPage { get; set; }
+        public int PerPage { get; init; }
 
-        public int Total { get; set; }
+        public int Total { get; init; }
 
         [JsonPropertyName("total_pages")]
-        public int TotalPages { get; set; }
+        public int TotalPages { get; init; }
 
-        public IEnumerable<T> Data { get; set; } = null!;
+        public IEnumerable<T> Data { get; init; } = null!;
     }
 }
