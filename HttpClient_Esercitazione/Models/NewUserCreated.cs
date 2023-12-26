@@ -4,9 +4,9 @@ namespace HttpClient_Esercitazione.Models
 {
     public class NewUserCreated : NewUser
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = null!;
 
         [JsonPropertyName("createdAt")]
-        public string Created { get; set; }
+        public string Created { get; set; } = null!;
     }
 }

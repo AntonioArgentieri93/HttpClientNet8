@@ -14,6 +14,6 @@ namespace HttpClient_Esercitazione.Models
         [JsonPropertyName("total_pages")]
         public int TotalPages { get; set; }
 
-        public IEnumerable<T> Data { get; set; }
+        public IEnumerable<T> Data { get; set; } = null!;
     }
 }
