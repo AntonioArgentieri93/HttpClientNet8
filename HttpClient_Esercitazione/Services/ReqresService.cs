@@ -20,7 +20,7 @@ namespace HttpClient_Esercitazione.Services
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<string> GetListUsersAsStringResultAsync(CancellationToken token)
+        public async Task<string> GetListUsersAsStringResultAsync(CancellationToken token = default)
         {
             var httpClient = _httpClientFactory.CreateClient("reqres");
 
@@ -48,7 +48,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<(ListResult<User>, string)> GetListUsersAsync(CancellationToken token)
+        public async Task<(ListResult<User>, string)> GetListUsersAsync(CancellationToken token = default)
         {
             var httpClient = _httpClientFactory.CreateClient("reqres");
 
@@ -86,7 +86,7 @@ namespace HttpClient_Esercitazione.Services
             } 
         }
 
-        public async Task<string> CreateNewUserAsStringResultAsync(CancellationToken token)
+        public async Task<string> CreateNewUserAsStringResultAsync(CancellationToken token = default)
         {
             var newUser = new NewUser
             {
@@ -120,7 +120,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<(NewUserCreated?, string)> CreateNewUserAsync(CancellationToken token)
+        public async Task<(NewUserCreated?, string)> CreateNewUserAsync(CancellationToken token = default)
         {
             var newUser = new NewUser
             {
@@ -160,7 +160,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<string> GetSingleUserNotFoundAsync(CancellationToken token)
+        public async Task<string> GetSingleUserNotFoundAsync(CancellationToken token = default)
         {
             try
             {
@@ -188,7 +188,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<(SingleResource?, string)> GetSingleResourceAsync(CancellationToken token)
+        public async Task<(SingleResource?, string)> GetSingleResourceAsync(CancellationToken token = default)
         {
             try
             {
@@ -222,7 +222,7 @@ namespace HttpClient_Esercitazione.Services
             }
         }
 
-        public async Task<string> GetDelayedResponseAsync(CancellationToken token)
+        public async Task<string> GetDelayedResponseAsync(CancellationToken token = default)
         {
             var httpClient = _httpClientFactory.CreateClient("reqres");
 
@@ -250,7 +250,7 @@ namespace HttpClient_Esercitazione.Services
             } 
         }
 
-        public async Task<string> DeleteUserAsync(CancellationToken token)
+        public async Task<string> DeleteUserAsync(CancellationToken token = default)
         {
             var httpClient = _httpClientFactory.CreateClient("reqres");
 
